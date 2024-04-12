@@ -1,0 +1,167 @@
+git commit -m"contaúdo da mensagem de commit": Gravação de arquivo no git. Esse comando serve para commitar os arquivos no git.
+O "-m" é referete ao termo "mensseger". Ou seja, mensagem que será gravada no commit.
+
+ctrl + l = É o comando que limpa a tela do terminal do git.
+
+git log: Comando para visualizar os logs dos arquivos gravados no repositório. 
+
+git remote add origin + endereço da pasta no github: Esse comando permite apontar para o repositório no github.
+Ou seja, o usuário cria uma página no github e pode direcionar uma página do seu computador local para a pasta do github sem
+precisar clonar o repositório.
+
+git clone + endereço da pasta no github: Esse comando serve para clonar um projeto no github.
+
+gitignore: Arquivo para ser criado no git e evitar que determinados arquivos sejam adicionaos.
+Ou seja, o git vai ignorar os arquivos que estuverem dentro dele. 
+
+Exemplo: touch .gitignore (Criar arquivo dentro da pasta desterminada)
+echo "nome do arquivo que vc quer ignorar" >> .gitignore (Escreve dentro do arquivo do gitignore o nome do arquivo que 
+você quer ignorar.).
+
+git add .gitignore: Adicionando o gitignore detro do githubIgnorando todos os arquivos de uma extenção: 
+echo "*.log" >> .gitignore
+
+Ignorando um diretório inteiro:
+echo "pastaignorada/" >> .gitignore
+
+git commit -am"Rastreando/adicionando e commitando ao mesmo tempo um arquivo."
+
+git log -n 3: Comando mostra os três últimos commits.
+
+git log --oneline: Resumo dos commits feitos no projeto.
+
+git log --state: Mostra o resumo dos arquivos alterados com o número de linhas alteradas e removidas.
+
+git rm nomedoarquivo: Esse comando serve para remover/deletar um arquivo do repositório. Todo arquivo removido precisa ser
+commitado - Não esquecer disso.
+
+git mv nomeantigo nome_novo: O comando "mv" altera o nome de um arquivo. Ou seja, renomeia o arquivo existente, exemplo:
+
+git mv algo01.py algoritmo01.py
+
+git checkout -- nomedoarquivo: Esse comando permite desfazer uma alteração em um determinado arquivo, exemplo:
+
+git checkout -- arquivo.txt: Cancelando a última alteração do arquivo. Lembrando, as alterações só podem ser refeitas
+se estiverem fora do stage. Ou seja, antes de adicionar o arquivo com o comando -> git add nomedoarquivo.
+
+git reset --hard: Comando para desfazer todas as modificações que você fez.
+
+git branch novo_branch: Comando para criar um novo branch.
+
+git branch: Comando para listar as branchs existentes.
+
+git checkout novo_branch: Comando para mudar de branch.
+
+git checkout -b nova_branch: Comando cria uma nova branch e troca para ela ao mesmo tempo.
+
+git branch -d nova_branch: Comando deleta um branch criada.
+
+git branch -D nova_branch: O comando usando o "-D" (letra maiúscula) é usando quando existe commit na branch.
+
+git branch --no-merged: Comando para identificar se existe alguma branch não mesclada.
+
+git merge nova_branch -m"Mensagem sobre a mesclagem da branch.": Esse comando mescla a nova_branch ao master.
+
+git init: Inicia um novo repositório Git na pasta atual.
+
+git clone [url]: Clona um repositório remoto para a sua máquina.
+
+git add [arquivo]: Adiciona um arquivo ao índice (staging area) para ser incluído no próximo commit.
+
+git commit -m "[mensagem]": Registra as alterações feitas e as prepara para serem enviadas para o repositório.
+
+git push: Envia os commits locais para um repositório remoto.
+
+git pull: Atualiza o repositório local com as alterações do repositório remoto.
+
+git status: Exibe o estado atual do repositório, mostrando os arquivos modificados, adicionados ou removidos.
+
+git branch: Lista todas as branches no repositório.
+
+git checkout [branch]: Muda para uma branch específica.
+
+git merge [branch]: Mescla os commits de uma branch para a branch atual.
+
+git remote -v: Lista os repositórios remotos configurados.
+
+git log: Exibe o histórico de commits.
+
+git clone --depth=1 [url]: Clona um repositório remoto com apenas o histórico de commit mais recente, economizando tempo e espaço.
+
+git remote -v: Exibe os repositórios remotos configurados e suas URLs.
+
+git branch -a: Lista todas as branches locais e remotas no repositório.
+
+git tag [nome]: Cria uma tag no commit atual, geralmente usada para marcar releases.
+
+git log --graph: Exibe o histórico de commits de forma gráfica, mostrando ramificações e fusões.
+
+git rebase [branch]: Reorganiza o histórico de commits da branch atual, aplicando os commits da branch especificada antes dos commits atuais.
+
+git revert [commit-hash]: Desfaz um commit específico, criando um novo commit que reverte as alterações introduzidas pelo commit original.
+
+git submodule add [url]: Adiciona um repositório como um submódulo dentro do repositório atual.
+
+git submodule update --init: Inicializa e atualiza os submódulos no repositório.
+
+git remote set-url [nome] [nova-url]: Atualiza a URL de um repositório remoto.
+
+git submodule update --remote: Atualiza todos os submódulos para usar as últimas versões conforme definido no repositório pai.
+
+git log --name-only: Exibe apenas os nomes dos arquivos modificados em cada commit.
+
+git log --graph --oneline --all: Uma visão geral compacta e gráfica do histórico de commits de todas as branches.
+
+git log --no-merges: Exibe o histórico de commits excluindo commits de mesclagem.
+
+git reset --soft [commit-hash]: Desfaz commits até um commit específico, mantendo as alterações em sua área de preparação (staging).
+
+git reset --mixed [commit-hash]: Desfaz commits até um commit específico, mantendo as alterações em seu diretório de trabalho, mas não na área de preparação.
+
+git reset --hard [commit-hash]: Desfaz commits até um commit específico e descarta todas as alterações no diretório de trabalho e na área de preparação.
+
+git config --global alias.[nome-do-alias] "[comando]": Cria um alias para um comando git específico.
+
+git bisect start: Inicia uma sessão de bisect para encontrar um commit que introduziu um bug.
+
+git bisect good [commit-hash]: Marca um commit como "bom" durante uma sessão de bisect.]
+
+git blame -L [linha-inicial],[linha-final] [arquivo]: Mostra quem modificou as linhas específicas de um arquivo e em qual commit.
+
+git reflog: Mostra um registro de todas as referências de HEAD, útil para recuperar commits perdidos ou desfazer ações indesejadas.
+
+git remote set-head [remote] [branch]: Define a branch padrão para pull e push de um repositório remoto.
+
+git push --delete [remote] [branch]: Remove uma branch específica do repositório remoto.
+
+git fetch --all: Busca todas as branches de todos os repositórios remotos configurados.
+
+git log --format="%an" | sort -u: Lista todos os autores únicos que contribuíram para o repositório.
+
+git log --format="%cn" | sort -u: Lista todos os nomes de commiters únicos que contribuíram para o repositório.
+
+git shortlog: Sumariza as contribuições de cada autor em um formato legível.
+
+git show [commit-hash]: Exibe informações detalhadas sobre um commit específico, incluindo as alterações introduzidas.
+
+git remote prune [remote]: Remove referências locais de branches remotas que foram excluídas no repositório remoto.
+ 
+git log --since="[data]" --until="[data]": Exibe o histórico de commits feitos dentro de um intervalo de datas específico.
+
+git log --author="[nome]" --grep="[palavra-chave]": Filtra o histórico de commits por autor e por uma palavra-chave específica.
+
+git log --oneline --graph --decorate --all: Exibe uma visualização gráfica e concisa do histórico de commits de todas as branches.
+
+git merge --no-ff [branch]: Realiza uma mesclagem entre branches, criando um novo commit de mesclagem mesmo se for possível fazer uma mesclagem rápida (fast-forward).
+
+git rebase -i [commit-hash]: Permite reorganizar e editar commits interativamente antes de aplicá-los.
+
+git log --pretty=format:"%h - %s" --graph: Exibe o histórico de commits em formato gráfico, incluindo apenas o hash do commit e a mensagem do commit.
+
+git remote show [remote]: Exibe informações detalhadas sobre um repositório remoto, incluindo as branches remotas e as configurações.
+
+git log --no-merges --author="[nome]": Exibe o histórico de commits feitos por um autor específico, excluindo commits de mesclagem.
+
+git show-branch: Exibe uma visualização gráfica das branches e dos commits em relação umas às outras.
+
+git reflog expire --expire=now --all: Limpa o reflog, removendo entradas antigas e liberando espaço.
